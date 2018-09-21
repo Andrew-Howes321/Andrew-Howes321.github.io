@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <div class="w3-top w3-bar w3-black w3-card">
+        <div class="w3-container w3-xxlarge w3-center w3-pading-small">
+            <p><b>Andrew Howes</b><p>
+        </div>
+    </div>
+
+    <title>Andrew Howes</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="W3.css" rel="stylesheet"/>
+<style>
+    {box-sizing: border-box}
+    body, html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial,serif;
+    }
+    .tablink {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 25%;
+    }
+    .tablink:hover {
+        background-color: #777;
+    }
+    .tabcontent {
+        color: white;
+        padding: 0px 20px;
+
+    }
+    #AboutMe {background-color: darkblue;}
+    #MyFam {background-color: cornflowerblue;}
+    #MyHob {background-color: dodgerblue;}
+    #MSC {background-color: royalblue;}
+</style>
+
+<body class="w3-black">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<button class="tablink" onclick="openPage('AboutMe', this, 'darkblue')" id="defaultOpen">About Me</button>
+<button class="tablink" onclick="openPage('MyFam', this, 'cornflowerblue')" >My Family</button>
+<button class="tablink" onclick="openPage('MyHob', this, 'dodgerblue')">My Hobbies</button>
+<button class="tablink" onclick="openPage('MSC', this, 'royalblue')">Music</button>
+<div id="AboutMe" class="tabcontent">
+    <br>
+    <br>
+    <br>
+    <h3>About Me</h3>
+
+    <div class="w3-center w3-xlarge">
+        <img src="Pics/me.jpg">
+        <p>
+            My name is Andrew Howes, I am eighteen years old, and I live in Hermon, Maine. <br> I am an Entrepreneur, Musician, and Producer.
+        </p>
+    </div>
+    <div class="w3-padding-64 w3-content" id="contact">
+        <h2>Contact</h2>
+        <div class="w3-row w3-padding-32 w3-text-white">
+            <div class="w3-col m6 w3-large w3-margin-bottom" >
+                &#128205 <a class=w3-button" href="https://www.google.com/maps/place/Gannett+Hall/@44.9010103,-68.6693303,16z/data=!4m5!3m4!1s0x4cafb12edd3addab:0xddbdb91eaeccfc57!8m2!3d44.9036685!4d-68.666482" >
+                233 Gannett Hall, University of Maine</a><br>
+                &#128241 Phone: <a class="w3-button" href="tel:2072499972">(207)249-9972</a><br>
+                &#128187 Email: <a class="w3-button"<a href="mailto:andrew.howes@maine.edu">andrew.howes@maine.edu</a>
+            </div>
+            <div class="w3-col m6">
+                <form action="mailto:andrew.howes@maine.edu?subject=Andrew Howes Contact " method="post" enctype="text/plain">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half"><u><input class="w3-input w3-border" name="Name" placeholder="Name" required="" type="text" /> </u></div>
+
+                        <div class="w3-half"><u><input class="w3-input w3-border" name="Email" placeholder="Email" required="" type="text" /> </u></div>
+                    </div>
+                    <u><input class="w3-input w3-border" name="Message" placeholder="Message" required="" type="text" />
+                        <button class="mailto:andrew@howesweetenterprises.com w3-button w3-white w3-section w3-right" type="submit">SEND</button> </u></form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="MyFam" class="tabcontent">
+    <br>
+    <br>
+    <br>
+    <h3>My Family</h3>
+    <div class="slideshow-container w3-large">
+
+        <div class="mySlides" style="text-align:center">
+            <img src="Pics/Ms.jpg" style="width:100%">
+            <div>My Sister, Megan</div>
+        </div>
+
+        <div class="mySlides " style="text-align:center">
+            <img src="Pics/Md.jpg" style="width:100%">
+            <div>My Dad, Jim</div>
+        </div>
+        <div class="mySlides" style="text-align:center">
+            <img src="Pics/Mm.jpg" style="width:100%">
+            <div>My Mom, Tammy</div>
+        </div>
+        <div class="mySlides" style="text-align:center">
+            <img src="Pics/Mc.jpg" style="width:100%">
+            <div>My Cat, Allie</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+</div>
+
+<div id="MyHob" class="tabcontent">
+    <br>
+    <br>
+    <br>
+    <h3>My Hobbies</h3>
+    <div>
+
+        <div class="w3-row-padding w3-large" style="margin:0 -16px">
+            <div class="w3-quarter">
+                <img src="Pics/One.jpg" style="width:100%">
+                <p>Jet Skiing on Embden Pond</p>
+                <img src="Pics/Two.jpg" style="width:100%">
+                <p>Hiking in Northern Maine</p>
+            </div>
+            <div class="w3-quarter">
+                <img src="Pics/Five.jpg" style="width:100%">
+                <p>Swimming with Loons</p>
+
+            </div>
+
+            <div class="w3-quarter">
+                <img src="Pics/Four.jpg" style="width:100%">
+                <p>Hunting for Ruffed Grouse</p>
+            </div>
+            <div class="w3-quarter">
+                <img src="Pics/Six.jpg" style="width:100%">
+                <p>Soaking in the Summer Sun</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="MSC" class="tabcontent">
+    <br>
+    <br>
+    <br>
+    <h3>Music</h3>
+    <div class="w3-padding-64 w3-content">
+        <img src="Pics/Music1.png" class="w3-image" style="display:block;margin:auto" width="600" height="400">
+        <div class="w3-row-padding w3-padding-16 w3-center" >
+            <div class="w3-third">
+                <video width="300" height="300" controls>
+                    <source src="Pics/XO Tour Llif3.mp4" type="video/mp4">
+                </video>
+                <h3>XO Tour Lif3</h3>
+                <p>Lil Uzi Vert</p>
+            </div>
+            <div class="w3-third">
+                <video width="300" height="300" controls>
+                    <source src="Pics/Issues1.mp4" type="video/mp4">
+                </video>
+                <h3>Issues</h3>
+                <p>Julia Michaels</p>
+            </div>
+            <div class="w3-third">
+                <video width="300" height="300" controls>
+                    <source src="Pics/Location.mp4" type="video/mp4">
+                </video>
+                <h3>Location</h3>
+                <p>Khalid</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function openPage(pageName,elmnt,color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+    }
+    document.getElementById("defaultOpen").click();
+</script>
+<div class="w3-container w3-large w3-text-white w3-center">
+    <p>Made By Andrew Howes</p>
+</div>
+</body>
+</html> 
